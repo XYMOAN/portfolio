@@ -14,7 +14,7 @@ function Projects() {
       github: "#"
     },
     {
-      title: "Tri-Sakay",
+      title: "asdasd",
       description: "tanga",
       tech: ["Next.js", "MongoDB", "TailwindCSS"],
       image: "/assets/me.png",
