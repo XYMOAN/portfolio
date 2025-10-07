@@ -24,14 +24,14 @@ export function Navbar() {
       onClick: () => scrollToSection("about"),
     },
     {
+      name: "Experience",
+      link: "#experience",
+      onClick: () => scrollToSection("experience"),
+    },
+    {
       name: "Projects",
       link: "#projects",
       onClick: () => scrollToSection("projects"),
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-      onClick: () => scrollToSection("contact"),
     },
   ];
   return (

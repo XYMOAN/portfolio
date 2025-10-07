@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { LampContainer } from '@/components/ui/lamp';
+import Experience from "./_components/Experience";
 
 export default function Home() {
     useEffect(() => {
@@ -53,12 +54,12 @@ export default function Home() {
         <div id="about">
           <About />
         </div>
+        <div id="experience">
+          <Experience />
+        </div>
         <div id="projects">
           <Projects />
         </div>
-        {/* <div id="contact">
-          <Contact />
-        </div> */}
         <Footer />
       </motion.div>
     </div>

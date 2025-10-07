@@ -3,9 +3,13 @@ import { motion } from "motion/react";
 
 function About() {
   const skills = [
-    "JavaScript", "TypeScript", "React", "Next.js",
-    "Node.js", "TailwindCSS", "MongoDB"
+    "HTML", "CSS", "JavaScript", "ReactJS", "NextJS",
+    "NodeJS", "TailwindCSS", "MongoDB", "Firebase", "MySQL",
   ];
+  
+  const technologies = [
+    "Git", "Bitbucket", "Jira", "GitHub", "Vercel"
+  ]
 
   return (
     <section className="px-4 max-w-6xl mx-auto">
@@ -26,28 +30,13 @@ function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-4"
-          >
-            <h3 className="text-xl font-semibold">What I Do</h3>
-            <ul className="space-y-2 text-neutral-600 dark:text-neutral-400">
-              <li>🚀 Full Stack Web Development</li>
-              <li>💻 Custom Software Solutions</li>
-              <li>🎨 UI/UX Implementation</li>
-              <li>📱 Responsive Web Design</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-4"
+            className="flex flex-col items-center space-y-4"
           >
             <h3 className="text-xl font-semibold">Tech Stack</h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {skills.map((skill, index) => (
                 <span
                   key={index}
@@ -58,21 +47,26 @@ function About() {
               ))}
             </div>
           </motion.div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <a
-            href="#contact"
-            className="inline-block px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-90 transition-opacity"
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center space-y-4"
           >
-            Let&apos;s Connect
-          </a>
-        </motion.div>
+            <h3 className="text-xl font-semibold">Technologies</h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   )
