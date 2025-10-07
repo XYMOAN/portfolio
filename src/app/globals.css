@@ -42,6 +42,30 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
+  /* Small shadow */
+  --shadow-s:
+    inset 0 1px 2px rgb(255 255 255 / 0.1),
+    0 2px 4px -1px rgb(0 0 0 / 0.15),
+    0 4px 8px -2px rgb(0 0 0 / 0.1),
+    0 8px 16px -4px rgb(0 0 0 / 0.08);
+
+  /* Medium shadow */
+  --shadow-m:
+    inset 0 2px 3px rgb(255 255 255 / 0.12),
+    0 4px 8px -2px rgb(0 0 0 / 0.2),
+    0 8px 16px -4px rgb(0 0 0 / 0.15),
+    0 16px 32px -8px rgb(0 0 0 / 0.12),
+    0 24px 48px -12px rgb(0 0 0 / 0.08);
+
+  /* Large shadow - maximum depth */
+  --shadow-l:
+    inset 0 2px 4px rgb(255 255 255 / 0.08),
+    0 6px 12px -2px rgb(0 0 0 / 0.25),
+    0 12px 24px -4px rgb(0 0 0 / 0.2),
+    0 24px 48px -8px rgb(0 0 0 / 0.15),
+    0 36px 72px -12px rgb(0 0 0 / 0.12),
+    0 48px 96px -16px rgb(0 0 0 / 0.08);
+
   --animate-aurora: aurora 60s linear infinite;
 
   @keyframes aurora {
@@ -122,6 +146,7 @@
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+
 }
 
 .dark {
@@ -165,5 +190,93 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .shadow-s {
+    box-shadow: var(--shadow-s);
+  }
+  
+  .shadow-m {
+    box-shadow: var(--shadow-m);
+  }
+  
+  .shadow-l {
+    box-shadow: var(--shadow-l);
+  }
+
+  /* Hover states - card "pops out" on hover */
+  .shadow-s-hover:hover {
+    box-shadow: var(--shadow-m);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .shadow-m-hover:hover {
+    box-shadow: var(--shadow-l);
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Dark mode: INSET shadows for pressed/recessed effect */
+  .dark .shadow-s {
+    box-shadow: 
+      inset 0 2px 8px rgb(0 0 0 / 0.5),
+      inset 0 4px 16px rgb(0 0 0 / 0.3),
+      inset 0 0 0 1px rgb(255 255 255 / 0.05);
+  }
+
+  .dark .shadow-m {
+    box-shadow: 
+      inset 0 4px 12px rgb(0 0 0 / 0.6),
+      inset 0 8px 24px rgb(0 0 0 / 0.4),
+      inset 0 12px 32px rgb(0 0 0 / 0.2),
+      inset 0 0 0 1px rgb(255 255 255 / 0.06);
+  }
+
+  .dark .shadow-l {
+    box-shadow: 
+      inset 0 6px 16px rgb(0 0 0 / 0.7),
+      inset 0 12px 32px rgb(0 0 0 / 0.5),
+      inset 0 24px 64px rgb(0 0 0 / 0.3),
+      inset 0 36px 96px rgb(0 0 0 / 0.2),
+      inset 0 0 0 1px rgb(255 255 255 / 0.08);
+  }
+
+  /* Alternative: Subtle pressed effect with light edge highlight */
+  .dark .shadow-s-pressed {
+    box-shadow: 
+      inset 0 2px 6px rgb(0 0 0 / 0.6),
+      inset 0 4px 12px rgb(0 0 0 / 0.4),
+      inset 0 -1px 2px rgb(255 255 255 / 0.1),
+      inset 0 0 0 1px rgb(0 0 0 / 0.3);
+  }
+
+  .dark .shadow-m-pressed {
+    box-shadow: 
+      inset 0 4px 12px rgb(0 0 0 / 0.7),
+      inset 0 8px 24px rgb(0 0 0 / 0.5),
+      inset 0 16px 48px rgb(0 0 0 / 0.3),
+      inset 0 -2px 4px rgb(255 255 255 / 0.12),
+      inset 0 0 0 1px rgb(0 0 0 / 0.4);
+  }
+
+  .dark .shadow-l-pressed {
+    box-shadow: 
+      inset 0 8px 20px rgb(0 0 0 / 0.8),
+      inset 0 16px 40px rgb(0 0 0 / 0.6),
+      inset 0 32px 80px rgb(0 0 0 / 0.4),
+      inset 0 48px 120px rgb(0 0 0 / 0.2),
+      inset 0 -3px 6px rgb(255 255 255 / 0.15),
+      inset 0 0 0 1px rgb(0 0 0 / 0.5);
+  }
+
+  /* Extreme depth: Very deep pressed effect */
+  .dark .shadow-l-deep {
+    box-shadow: 
+      inset 0 12px 32px rgb(0 0 0 / 0.9),
+      inset 0 24px 64px rgb(0 0 0 / 0.7),
+      inset 0 48px 128px rgb(0 0 0 / 0.5),
+      inset 0 -4px 8px rgb(255 255 255 / 0.1),
+      inset 0 0 0 2px rgb(0 0 0 / 0.6);
   }
 }

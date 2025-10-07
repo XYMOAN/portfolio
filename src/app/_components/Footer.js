@@ -18,15 +18,14 @@ function Footer() {
               <li><Link href="/" className="hover:text-neutral-900 dark:hover:text-white">Home</Link></li>
               <li><Link href="/#about" className="hover:text-neutral-900 dark:hover:text-white">About</Link></li>
               <li><Link href="/#projects" className="hover:text-neutral-900 dark:hover:text-white">Projects</Link></li>
-              <li><Link href="/#contact" className="hover:text-neutral-900 dark:hover:text-white">Contact</Link></li>
             </ul>
           </div>
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Connect</h3>
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-              <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">LinkedIn</a></li>
-              <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">Twitter</a></li>
+              <li><a href="https://github.com/XYMOAN" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/xymon-darcen/" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">LinkedIn</a></li>
+              <li><a href="https://www.facebook.com/xymon.darcen/" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-white">Facebook</a></li>
             </ul>
           </div>
         </div>
