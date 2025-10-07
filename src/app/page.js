@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect} from "react";
 import { Navbar } from "./_components/navbar";
 import Header from "./_components/Header";
 import About from "./_components/About";
@@ -11,8 +11,13 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
+import { LampContainer } from '@/components/ui/lamp';
 
 export default function Home() {
+    useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <div className="relative min-h-screen dark"> 
     <BackgroundRippleEffect />
@@ -51,9 +56,9 @@ export default function Home() {
         <div id="projects">
           <Projects />
         </div>
-        <div id="contact">
+        {/* <div id="contact">
           <Contact />
-        </div>
+        </div> */}
         <Footer />
       </motion.div>
     </div>
