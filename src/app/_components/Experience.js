@@ -8,34 +8,62 @@ const Experience = () => {
             content: {
                 title: "Full-Stack Web Developer Intern",
                 description: "Creciendo Philippines | Engineering Department",
-                responsibilities:
-                    [
-                        "Improved the front-end and back-end of the job application module of Creciendo Philippines website.",
-                        "Integrated OpenAI API for job application process for better applicant experience.",
-                        "Development of Contract Signing of the applicant and Applicant Submission for Job Requirements.",
-                        "Implemented the new module UI in the company's internal Business Information Management System (BIMS) for the Performance Management for Goal Setting and Task Management modules.",
-                        "Collaborating with the Team to ensure that the system is aligned with the expected outcome.",
-                        "Testing of the system for both front-end designs and back-end functionalities meet the needs."
-                    ],
-                techstack: ["React.js", "Next.js", "Tailwind CSS", "DaisyUI", "Node.js", "MongoDB", "Bitbucket", "JIRA", "Git"]
-            },
+                responsibilities: [
+                    "Enhanced both the front-end and back-end of the job application module on the Creciendo Philippines website.",
+                    "Integrated the OpenAI API into the job application process to improve the applicant experience.",
+                    "Developed the Contract Signing and Job Requirements Submission modules for applicants.",
+                    "Implemented a new user interface for the Performance Management, Goal Setting, and Task Management modules within the company’s internal Business Information Management System (BIMS).",
+                    "Collaborated with the team to ensure the system aligned with the expected outcomes.",
+                    "Conducted system testing to verify that both front-end design and back-end functionality met user needs."
+                ],
+                techstack: [
+                    "React.js",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "DaisyUI",
+                    "Node.js",
+                    "MongoDB",
+                    "Bitbucket",
+                    "Jira",
+                    "Git"
+                ]
+            }
         },
         {
             title: "2023 - 2024",
             content: {
                 title: "FlutterFlow Developer",
                 description: "National University Bulacan | Tri-Sakay (Capstone Project)",
-                responsibilities:
-                    [
-                        "Development of the Ride Booking, Fare Transparency, Rates and Feedback, Trip History, Reporting, and User Management Modules.",
-                        "Integrated Goole Maps API for displaying real-time tricycle locations for easy booking, providing navigation and routing assistance for efficient rides, tracking ongoing trips.",
-                        "Utillized the Firebase services for authentication, database storage, and cloud function for back-end logic.",
-                    ],
+                responsibilities: [
+                    "Developed the Ride Booking, Fare Transparency, Rates and Feedback, Trip History, Reporting, and User Management modules.",
+                    "Integrated the Google Maps API to display real-time tricycle locations for easier booking, navigation, route assistance, and trip tracking.",
+                    "Utilized Firebase services for authentication, database storage, and cloud functions for back-end logic."
+                ],
                 techstack: ["FlutterFlow", "Firebase", "Google Maps API"]
-            },
+            }
         },
-
+        {
+            title: "2022 - 2023",
+            content: {
+                title: "School Projects",
+                description: "National University Bulacan",
+                responsibilities: [
+                    "Developed our first thesis project, the Ramky Parking Web Application, using HTML, CSS, JavaScript, PHP, and MySQL. The system enabled efficient tracking and monitoring of parking activities, including time in/out logging and report generation.",
+                    "Created dynamic websites such as Seafood To Go and an E-Commerce platform."
+                ],
+                techstack: [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "ReactJS",
+                    "PHP",
+                    "Firebase",
+                    "MySQL"
+                ]
+            }
+        }
     ];
+
     return (
         <div className="relative w-full overflow-clip mt-14">
             <Timeline data={data} />
