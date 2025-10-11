@@ -3,55 +3,11 @@ import { motion } from "motion/react";
 import Image from 'next/image';
 import Modals from './Modals/Modals';
 import { isVideo } from '@/lib/utils';
+import { projects } from './Data/MockData';
 
 function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [projectDetails, setProjectDetails] = useState({})
-  const projects = [
-    {
-      title: "Tri-Sakay",
-      description: "Tricycle Ride-Hailing Android Application",
-      tech: ["FlutterFlow", "Firebase", "Google Maps API"],
-      image: "/assets/flutterflow_trisakay.png",
-      link: "",
-      github: "",
-      details: {
-        overview: "TriSakay: A Tricycle Ride-Hailing Android Application for Safe and Transparent Urban Transportation in Baliwag City, Bulacan",
-        features: [
-          "Ride Booking Module",
-          "Fare Transparency Module",
-          "Rates and Feedback Module",
-          "Trip History Module",
-          "Reporting Module",
-          "User Management Module",
-        ],
-        technical: "This project uses firebase services for secure user authentication, real-time databases for storing and synchronizing data (user profiles, ride requests, driver locations), cloud storage for files, crash reporting and performance monitoring tools, remote configuration capabilities and cloud functions for backend logic." + " "
-          + "Google Maps widget is used for tricycle ride-hailing mobile application by enabling key features such as displaying real-time tricycle locations for easy booking, providing navigation and routing assistance for efficient rides, tracking ongoing trips for transparency and safety, marking pickup/drop-off points clearly, displaying relevant ride information",
-        content: ["/assets/trisakay_actual.mp4",],
-      },
-    },
-    {
-      title: "Seafood To Go",
-      description: "Dynamic Single Page Application Website",
-      tech: ["HTML", "CSS", "PHP", "MySQL", "Bootstrap"],
-      image: "/assets/seafoodtogo.png",
-      link: "",
-      github: "https://github.com/XYMOAN/seafoodtogo",
-      details: {
-        overview: "Seafood To Go is my project for developing a dynamic web application.",
-        features: [
-          "Admin Login for CRUD operations of products of Seafood To Go",
-          "Contact details for order inquiries",
-        ],
-        technical: null,
-        content: [
-          "/assets/seafoodtogo.png",
-          "/assets/seafoodtogo_products.png",
-        ],
-      },
-    },
-  ];
-
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto">
@@ -92,14 +48,16 @@ function Projects() {
                     Your browser does not support the video tag.
                   </video>
                 ) : (
-                  <Image
-                    src={project.image}
-                    width={100}
-                    height={100}
-                    quality={100}
-                    alt={project.title}
-                    className="w-full h-full object-contain rounded-xl dark:shadow-[0_0_12px_rgba(255,255,255,0.08)]"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      quality={100}
+                      className="object-cover rounded-xl dark:shadow-[0_0_12px_rgba(255,255,255,0.08)]"
+                    />
+                  </div>
+
                 )}
               </div>
               <div className="p-6 space-y-4">

@@ -1,15 +1,8 @@
 import React from 'react'
 import { motion } from "motion/react";
+import { skills, technologies } from './Data/MockData';
 
 function About() {
-  const skills = [
-    "HTML", "CSS", "JavaScript", "ReactJS", "NextJS",
-    "NodeJS", "TailwindCSS", "MongoDB", "Firebase", "MySQL",
-  ];
-  
-  const technologies = [
-    "Git", "Bitbucket", "Jira", "GitHub", "Vercel"
-  ]
 
   return (
     <section className="px-4 max-w-6xl mx-auto">
