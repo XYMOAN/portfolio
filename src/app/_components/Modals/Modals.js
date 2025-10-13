@@ -75,7 +75,7 @@ const Modals = ({ isModalOpen, setIsModalOpen, projectDetails }) => {
 
             {projectDetails?.details?.technical && (
               <>
-                <h2 className="text-2xl font-semibold text-white mt-8">Technical Deep Dive</h2>
+                <h2 className="text-2xl font-semibold text-white mt-8">Description</h2>
                 <p className='text-justify'>
                   {projectDetails?.details?.technical}
                 </p>
@@ -115,7 +115,7 @@ const Modals = ({ isModalOpen, setIsModalOpen, projectDetails }) => {
                             fill
                             quality={100}
                             alt={`${projectDetails?.title} - Image ${index + 1}`}
-                            className="object-contain"
+                            className="object-cover"
                           />
                         </div>
                       )}

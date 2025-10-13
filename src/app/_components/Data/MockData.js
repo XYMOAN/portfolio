@@ -16,8 +16,9 @@ const projects = [
                 "Reporting Module",
                 "User Management Module",
             ],
-            technical: "This project is built in FlutterFlow and it uses firebase services for secure user authentication, real-time databases for storing and synchronizing data (user profiles, ride requests, driver locations), cloud storage for files, crash reporting and performance monitoring tools, remote configuration capabilities and cloud functions for backend logic." + " "
-                + "Google Maps widget is used for tricycle ride-hailing mobile application by enabling key features such as displaying real-time tricycle locations for easy booking, providing navigation and routing assistance for efficient rides, tracking ongoing trips for transparency and safety, marking pickup/drop-off points clearly, displaying relevant ride information",
+            technical:
+                "Built using FlutterFlow, Tri-Sakay leverages Firebase services for secure user authentication, real-time database management (storing user profiles, ride requests, and driver locations), cloud storage for file handling, and cloud functions for backend automation." +
+                "The app integrates the Google Maps API to display real-time tricycle locations, provide navigation and route guidance, track ongoing trips for transparency and safety, set pickup and drop-off points, and display relevant ride details seamlessly within the interface.",
             content: ["/assets/trisakay_actual.mp4",],
         },
     },
@@ -44,13 +45,20 @@ const projects = [
 ];
 
 const skills = [
-    "HTML", "CSS", "JavaScript", "ReactJS", "NextJS",
-    "NodeJS", "TailwindCSS", "MongoDB", "Firebase", "MySQL",
-];
+    {
+        title: "Front-End",
+        stack: ["HTML", "CSS", "JavaScript", "ReactJS", "NextJS", "TailwindCSS"],
+    },
+    {
+        title: "Back-End",
+        stack: ["NodeJS", "PHP", "MongoDB", "Firebase", "MySQL",],
+    },
+    {
+        title: "Tools & Technologies",
+        stack: ["Git", "Bitbucket", "Jira", "GitHub", "Vercel", "FlutterFlow"]
+    },
 
-const technologies = [
-    "Git", "Bitbucket", "Jira", "GitHub", "Vercel"
-]
+];
 
 
 const experiences = [
@@ -81,7 +89,7 @@ const experiences = [
         }
     },
     {
-        title: "2023 - 2024",
+        title: "January 2024 - November 2024",
         content: {
             title: "FlutterFlow Developer",
             description: "National University Bulacan | Tri-Sakay (Capstone Project)",
@@ -94,9 +102,9 @@ const experiences = [
         }
     },
     {
-        title: "2022 - 2023",
+        title: "2021 - 2023",
         content: {
-            title: "School Projects",
+            title: "Full-Stack Web Developer",
             description: "National University Bulacan",
             responsibilities: [
                 "Developed our first thesis project, the Ramky Parking Web Application, using HTML, CSS, JavaScript, PHP, and MySQL. The system enabled efficient tracking and monitoring of parking activities, including time in/out logging and report generation.",
@@ -116,4 +124,4 @@ const experiences = [
 ];
 
 
-export { projects, skills, technologies, experiences };
+export { projects, skills, experiences };
