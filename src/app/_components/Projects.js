@@ -30,78 +30,93 @@ function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{
-                scale: 1.05,
-                y: -10,
+                scale: 1.02,
+                y: -8,
                 transition: { duration: 0.3, ease: "easeOut" }
               }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="group relative bg-neutral-50 dark:bg-neutral-900 rounded-xl overflow-hidden shadow-l"
+              className="group relative"
             >
-              <div className="aspect-video bg-neutral-100 dark:bg-neutral-950 p-2">
-                {isVideo(project.image) ? (
-                  <video
-                    className="w-full h-full object-cover"
-                    controls
-                    loop
-                  >
-                    <source src={project.image} type={`video/mp4`} />
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <div className="relative w-full h-full">
+              {/* Subtle glow on hover */}
+              <div className="absolute -inset-0.5 bg-white/5 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              {/* Glass card */}
+              <div className="relative h-full backdrop-blur-xl bg-white/5 dark:bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+                {/* Image section */}
+                <div className="aspect-video bg-neutral-100 dark:bg-neutral-950/50 p-2">
+                  <div className="relative w-full h-full rounded-xl overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      quality={100}
-                      className="object-cover rounded-xl dark:shadow-[0_0_12px_rgba(255,255,255,0.08)]"
+                      quality={75}
+                      className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                     />
+                    {/* Subtle gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
+
+                {/* Content section */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="space-y-4 shadow-m-pressed p-4 rounded-md">
+                    <h3 className="font-semibold text-xl text-neutral-900 dark:text-neutral-100">
+                      {project.title}
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Tech stack */}
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {project.tech.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 text-xs font-medium bg-white/10 dark:bg-white/5 backdrop-blur-sm text-neutral-700 dark:text-neutral-300 rounded-full border border-white/10 hover:bg-white/20 dark:hover:bg-white/10 transition-colors h-fit"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                )}
-              </div>
-              <div className="p-6 space-y-4">
-                <h3 className="font-semibold text-xl">{project.title}</h3>
-                <p className="text-neutral-600 dark:text-neutral-400">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 text-xs bg-neutral-200 dark:bg-neutral-800 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {/* Links section */}
+                  <div className="pt-4 mt-auto border-t border-white/10 flex gap-4 flex-wrap">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1"
+                      >
+                        View Project
+                        <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1"
+                      >
+                        GitHub
+                        <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                      </a>
+                    )}
+                    {project.details && (
+                      <a
+                        onClick={() => (setIsModalOpen(true), setProjectDetails(project))}
+                        className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1"
+                      >
+                        View Project Details
+                        <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className="flex gap-4">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      className="text-sm font-medium hover:underline cursor-pointer"
-                    >
-                      View Project →
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-medium hover:underline cursor-pointer"
-                    >
-                      GitHub →
-                    </a>
-                  )}
-                  {project.details && (
-                    <a
-                      onClick={() => (setIsModalOpen(true), setProjectDetails(project))}
-                      className="text-sm font-medium hover:underline cursor-pointer"
-                    >
-                      View Project Details →
-                    </a>
-                  )}
+
+                {/* Subtle shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent" />
                 </div>
               </div>
             </motion.div>
