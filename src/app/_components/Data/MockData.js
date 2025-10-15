@@ -42,6 +42,33 @@ const projects = [
             ],
         },
     },
+    {
+        title: "Ramky Parking Web Application",
+        description: "Parking Management Web Application",
+        tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+        image: "/assets/ramkyparking.png",
+        link: "",
+        github: "",
+        details: {
+            overview: "Our first Thesis Project and created a Web Application wherein this system aims to boost the productivity, accuracy, speed, and convenience of our clients' business to reduce manual report preparation and paper transactions this system will make client’srequest possible..",
+            features: [
+                "Time Tracking",
+                "Viewing of parking rules, and parking rates",
+                "Requesting Access for vehicle maintenance",
+                "Report for suspicious vehicle",
+                "QR Code Generation for registered vehicles",
+                "Generate Reports for easier auditing process",
+            ],
+            technical: null,
+            content: [
+                "/assets/ramkyscanner.png",
+                "/assets/ramkyrates.png",
+                "/assets/ramkyrequest.png",
+                "/assets/ramkyreport.png",
+                "/assets/ramkyupdate.png",
+            ],
+        },
+    },
 ];
 
 const skills = [
@@ -107,8 +134,8 @@ const experiences = [
             title: "Full-Stack Web Developer",
             description: "National University Bulacan",
             responsibilities: [
-                "Developed our first thesis project, the Ramky Parking Web Application, using HTML, CSS, JavaScript, PHP, and MySQL. The system enabled efficient tracking and monitoring of parking activities, including time in/out logging and report generation.",
-                "Created dynamic websites such as Seafood To Go and an E-Commerce platform."
+                "Developed the team's first thesis project, the Ramky Parking Web Application, using HTML, CSS, JavaScript, PHP, and MySQL. The system enabled efficient tracking and monitoring of parking activities, including time-in/time-out logging and automated report generation.",
+                "Built and explored dynamic websites, including Single Page Applications (SPAs) and E-Commerce platforms."
             ],
             techstack: [
                 "HTML",

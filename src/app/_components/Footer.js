@@ -17,6 +17,7 @@ function Footer() {
             <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
               <li><Link href="/" className="hover:text-neutral-900 dark:hover:text-white">Home</Link></li>
               <li><Link href="/#about" className="hover:text-neutral-900 dark:hover:text-white">About</Link></li>
+              <li><Link href="/#experience" className="hover:text-neutral-900 dark:hover:text-white">Experience</Link></li>
               <li><Link href="/#projects" className="hover:text-neutral-900 dark:hover:text-white">Projects</Link></li>
             </ul>
           </div>
