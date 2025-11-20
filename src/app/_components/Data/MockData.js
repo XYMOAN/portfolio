@@ -1,10 +1,42 @@
 const projects = [
     {
+        title: "POS Nanay Floras",
+        description: "Point of Sales Desktop Application",
+        tech: [
+            "Electron.js",
+            "Electron Forge",
+            "ReactJS",
+            "Vite",
+            "Node.js",
+            "PouchDB",
+            "CouchDB",
+            "Offline-First Architecture"
+        ],
+        image: "/assets/nanayfloras.png",
+        link: "", // For live demo
+        github: "",
+        details: {
+            overview:
+                "A freelance project developed for Nanay Floras, a local pasalubong store, to replace manual inventory and sales tracking which previously caused stock loss, slow operations, and inconsistencies.",
+            features: [
+                "Product Management (CRUD)",
+                "Offline-First Inventory Tracking",
+                "Automated Stock Adjustment",
+                "Sales Processing & Sales History",
+                "Real-time Inventory Updates",
+                "Sales Reporting Module"
+            ],
+            technical:
+                "Developed using Electron.js with Vite and ReactJS for the frontend shell and Node.js for the backend logic. Implemented PouchDB for local offline storage with automatic synchronization to CouchDB, enabling reliable operations even without internet connectivity. Designed automated workflows to eliminate manual stock counting and reduce inventory discrepancies.",
+            content: [],
+        },
+    },
+    {
         title: "Tri-Sakay",
         description: "Tricycle Ride-Hailing Android Application",
         tech: ["FlutterFlow", "Firebase", "Google Maps API"],
         image: "/assets/flutterflow_trisakay.png",
-        link: "",
+        link: "", // For live demo
         github: "",
         details: {
             overview: "TriSakay: A Tricycle Ride-Hailing Android Application for Safe and Transparent Urban Transportation in Baliwag City, Bulacan",
@@ -20,26 +52,6 @@ const projects = [
                 "Built using FlutterFlow, Tri-Sakay leverages Firebase services for secure user authentication, real-time database management (storing user profiles, ride requests, and driver locations), cloud storage for file handling, and cloud functions for backend automation." +
                 "The app integrates the Google Maps API to display real-time tricycle locations, provide navigation and route guidance, track ongoing trips for transparency and safety, set pickup and drop-off points, and display relevant ride details seamlessly within the interface.",
             content: ["/assets/trisakay_actual.mp4",],
-        },
-    },
-    {
-        title: "Seafood To Go",
-        description: "Dynamic Single Page Application Website",
-        tech: ["HTML", "CSS", "PHP", "MySQL", "Bootstrap"],
-        image: "/assets/seafoodtogo.png",
-        link: "",
-        github: "https://github.com/XYMOAN/seafoodtogo",
-        details: {
-            overview: "Seafood To Go is my project for developing a dynamic web application.",
-            features: [
-                "Admin Login for CRUD operations of products of Seafood To Go",
-                "Contact details for order inquiries",
-            ],
-            technical: null,
-            content: [
-                "/assets/seafoodtogo.png",
-                "/assets/seafoodtogo_products.png",
-            ],
         },
     },
     {
@@ -69,6 +81,26 @@ const projects = [
             ],
         },
     },
+    {
+        title: "Seafood To Go",
+        description: "Dynamic Single Page Application Website",
+        tech: ["HTML", "CSS", "PHP", "MySQL", "Bootstrap"],
+        image: "/assets/seafoodtogo.png",
+        link: "", // For live demo
+        github: "https://github.com/XYMOAN/seafoodtogo",
+        details: {
+            overview: "Seafood To Go is my project for developing a dynamic web application.",
+            features: [
+                "Admin Login for CRUD operations of products of Seafood To Go",
+                "Contact details for order inquiries",
+            ],
+            technical: null,
+            content: [
+                "/assets/seafoodtogo.png",
+                "/assets/seafoodtogo_products.png",
+            ],
+        },
+    },
 ];
 
 const skills = [
@@ -78,7 +110,7 @@ const skills = [
     },
     {
         title: "Back-End",
-        stack: ["NodeJS", "PHP", "MongoDB", "Firebase", "MySQL",],
+        stack: ["NodeJS", "PHP", "MongoDB", "Firebase", "MySQL", "PouchDB", "CouchDB"],
     },
     {
         title: "Tools & Technologies",
